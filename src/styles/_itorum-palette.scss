@@ -1,0 +1,33 @@
+
+$itorum-green-palette: (
+  50: #f4ffeb,
+  100: #e5ffcd,
+  200: #c0ef9a,
+  300: #a1e573,
+  400: #98ef50,
+  500: var(--primary-color),
+  600: #55e535,
+  700: #53d32f,
+  800: #4ac628,
+  900: #2cb71c,
+  A100: #84ff80,
+  A200: #77ff52,
+  A400: #17ff23,
+  A700: #07d500,
+  contrast: (
+    //50: $black-87-opacity,
+    //100: $black-87-opacity,
+    //200: $black-87-opacity,
+    //300: $black-87-opacity,
+    //400: $black-87-opacity,
+    500: black,
+    600: white,
+    700: white,
+    //800: $white-87-opacity,
+    //900: $white-87-opacity,
+    //A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
