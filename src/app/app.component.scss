@@ -1,0 +1,13 @@
+@use 'src/styles/partials/icon-size' as m;
+
+:host {
+  .myIcon {
+    @include m.md-icon-size(32px);
+  }
+
+  mat-nav-list {
+    a {
+        width: 300px;
+    }
+  }
+}

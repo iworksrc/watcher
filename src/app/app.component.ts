@@ -4,7 +4,7 @@ import {MatSidenav} from "@angular/material/sidenav";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'watcher';
@@ -34,10 +34,10 @@ export class AppComponent implements OnInit {
 
   private trackWidth(width: number) {
     if (width < 768) {
-      this.sidenav.fixedTopGap = 64;
+      // this.sidenav.fixedTopGap = 64;
       this.opened = false;
     } else {
-      this.sidenav.fixedTopGap = 64;
+      // this.sidenav.fixedTopGap = 64;
       this.opened = true;
     }
   }
