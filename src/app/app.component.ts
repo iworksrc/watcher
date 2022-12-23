@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {MatSidenav} from "@angular/material/sidenav";
+import {Theme} from "./theme";
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,8 @@ export class AppComponent implements OnInit {
   @ViewChild('sidenav', { static: true }) sidenav!: MatSidenav;
 
   opened = true;
+
+  theme = new Theme(124, 48, 47, 50, false);
 
   ngOnInit(): void {
     console.log(window.innerWidth);
