@@ -73,7 +73,71 @@
       </mat-tab-group>
     </section>
 
-    <button mat-button (click)="isAlterTheme = !isAlterTheme">switch theme</button>
+    <button appItButton [permanentColor]="'blue'" (click)="isAlterTheme = !isAlterTheme">switch theme</button>
+
+
+    <div class="theme">
+      <div class="label">
+        Theme:
+      </div>
+      <div class="value">
+        <button mat-icon-button color="primary" aria-label="Change theme" (click)="theme.dark = !theme.dark">
+          <mat-icon>{{theme.dark ? 'nights_stay' : 'wb_sunny'}}</mat-icon>
+        </button>
+      </div>
+
+
+      <div class="label">Hue:</div>
+      <div class="value">
+        <mat-slider
+          [value]="theme.h"
+          (input)="theme.h = $event.value"
+          thumbLabel
+          color="primary"
+          tickInterval="1"
+          min="0"
+          max="360"></mat-slider>
+      </div>
+      <div class="label">
+        Saturate:
+      </div>
+      <div class="value">
+        <mat-slider
+          [value]="theme.s"
+          (input)="theme.s = $event.value"
+          thumbLabel
+          color="primary"
+          tickInterval="1"
+          min="0"
+          max="100"></mat-slider>
+      </div>
+      <div class="label">
+        Lightness:
+      </div>
+      <div class="value">
+        <mat-slider
+          [value]="theme.l"
+          (input)="theme.l = $event.value"
+          thumbLabel
+          color="primary"
+          tickInterval="1"
+          min="0"
+          max="100"></mat-slider>
+      </div>
+      <div class="label">
+        Contrast threshold:
+      </div>
+      <div class="value">
+        <mat-slider
+          [value]="theme.cc"
+          (input)="theme.cc = $event.value"
+          thumbLabel
+          color="primary"
+          tickInterval="1"
+          min="0"
+          max="100"></mat-slider>
+      </div>
+    </div>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
