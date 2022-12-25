@@ -7,6 +7,7 @@ export class Theme {
   }, 150);
 
   private _h: number | null;
+  private role: "primary" | "accent" | "warn" | string;
   get h(): number | null {
     return this._h;
   }
@@ -56,20 +57,21 @@ export class Theme {
     this.applyThemeThrottle();
   }
 
-  constructor(h: number, s: number, l: number, cc: number, dark: boolean) {
+  constructor(h: number, s: number, l: number, cc: number, dark: boolean, role: 'primary' | 'accent' | 'warn' | string) {
     this._h = h || 0;
     this._s = s || 50;
     this._l = l || 50;
     this._cc = cc || 50;
     this._dark = dark;
+    this.role = role;
   }
 
   private applyTheme(): void {
     document.documentElement.style.setProperty('--is-dark-theme', `${+this.dark}`);
-    document.documentElement.style.setProperty('--primary-h', `${this.h}`);
-    document.documentElement.style.setProperty('--primary-s', `${this.s}`);
-    document.documentElement.style.setProperty('--primary-l', `${this.l}`);
-    document.documentElement.style.setProperty('--primary-contrast-threshold', `${this.cc}%`);
+    document.documentElement.style.setProperty(`--${this.role}-h`, `${this.h}`);
+    document.documentElement.style.setProperty(`--${this.role}-s`, `${this.s}`);
+    document.documentElement.style.setProperty(`--${this.role}-l`, `${this.l}`);
+    document.documentElement.style.setProperty(`--${this.role}-contrast-threshold`, `${this.cc}%`);
   }
 
 }

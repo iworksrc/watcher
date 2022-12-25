@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
 
   opened = true;
 
-  theme = new Theme(124, 48, 47, 50, false);
+  themePrimary = new Theme(124, 48, 47, 50, false, 'primary');
+  themeAccent = new Theme(124, 48, 47, 50, false, 'accent');
+  themeWarn = new Theme(124, 48, 47, 50, false, 'warn');
 
   ngOnInit(): void {
     console.log(window.innerWidth);
