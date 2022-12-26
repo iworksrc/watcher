@@ -253,6 +253,176 @@
         </div>
       </div>
     </section>
+
+
+    <section class="flex-between" style="margin-left: auto; margin-right: auto; width: 50%">
+      <div class="theme">
+        <h5>Alt-Primary</h5>
+
+        <div class="label">Hue:</div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltPrimary.h"
+            (input)="themeAltPrimary.h = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="360"></mat-slider>
+        </div>
+        <div class="label">
+          Saturate:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltPrimary.s"
+            (input)="themeAltPrimary.s = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Lightness:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltPrimary.l"
+            (input)="themeAltPrimary.l = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Contrast threshold:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltPrimary.cc"
+            (input)="themeAltPrimary.cc = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+      </div>
+
+      <div class="theme">
+        <h5>Alt-Accent</h5>
+
+
+        <div class="label">Hue:</div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltAccent.h"
+            (input)="themeAltAccent.h = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="360"></mat-slider>
+        </div>
+        <div class="label">
+          Saturate:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltAccent.s"
+            (input)="themeAltAccent.s = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Lightness:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltAccent.l"
+            (input)="themeAltAccent.l = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Contrast threshold:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltAccent.cc"
+            (input)="themeAltAccent.cc = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+      </div>
+
+      <div class="theme">
+        <h5>Alt-Warn</h5>
+
+
+        <div class="label">Hue:</div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltWarn.h"
+            (input)="themeAltWarn.h = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="360"></mat-slider>
+        </div>
+        <div class="label">
+          Saturate:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltWarn.s"
+            (input)="themeAltWarn.s = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Lightness:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltWarn.l"
+            (input)="themeAltWarn.l = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Contrast threshold:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAltWarn.cc"
+            (input)="themeAltWarn.cc = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+      </div>
+    </section>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

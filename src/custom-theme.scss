@@ -54,7 +54,6 @@
 
 @import '@angular/material/theming';
 
-
 @import "theme-maps"; // Important: see this file!
 
 @include mat.core();
@@ -66,6 +65,10 @@
 $primary-palette: mat.define-palette($primary-map);
 $accent-palette: mat.define-palette($accent-map);
 $warn-palette: mat.define-palette($warn-map);
+
+$alt-primary-palette: mat.define-palette($alt-primary-map);
+$alt-accent-palette: mat.define-palette($alt-accent-map);
+$alt-warn-palette: mat.define-palette($alt-warn-map);
 
 //$accent-palette: mat.define-palette(mat.$grey-palette, A200, A100, A400);
 //$warn-palette: mat.define-palette(mat.$red-palette);
@@ -80,14 +83,20 @@ $theme: ngx-mtc.custom-theme(
 @include mat.all-component-themes($theme);
 
 .alter-theme {
-  $alter-primary: mat.define-palette(mat.$light-blue-palette);
-  $alter-accent: mat.define-palette(mat.$yellow-palette, 400);
-  $alter-theme: mat.define-light-theme((
-    color: (
-      primary: $alter-primary,
-      accent: $alter-accent
-    )
-  ));
+  //$alter-primary: mat.define-palette($alt-primary-palette);
+  //$alter-accent: mat.define-palette($alt-accent-palette, 400);
+  //$alter-theme: mat.define-light-theme((
+  //  color: (
+  //    primary: $alter-primary,
+  //    accent: $alter-accent
+  //  )
+  //));
+  //@include mat.all-component-colors($alter-theme);
+  $alter-theme: ngx-mtc.custom-theme(
+      $alt-primary-palette,
+      $alt-accent-palette,
+      $alt-warn-palette
+  );
   @include mat.all-component-colors($alter-theme);
 }
 
@@ -115,6 +124,9 @@ $theme: ngx-mtc.custom-theme(
   @include ngx-mtc.create-variables-from-color('primary', #50aa50, 50%); // create theme from color
   @include ngx-mtc.create-variables-from-color('accent', #b5a53f, 50%); // create theme from color
   @include ngx-mtc.create-variables-from-color('warn', #b53f74, 50%); // create theme from color
+  @include ngx-mtc.create-variables-from-color('alt-primary', #087ed6, 50%); // create theme from color
+  @include ngx-mtc.create-variables-from-color('alt-accent', #f4864b, 50%); // create theme from color
+  @include ngx-mtc.create-variables-from-color('alt-warn', #ff0220, 50%); // create theme from color
 }
 
 
