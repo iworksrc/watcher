@@ -73,7 +73,186 @@
       </mat-tab-group>
     </section>
 
-    <button mat-button (click)="isAlterTheme = !isAlterTheme">switch theme</button>
+    <button appItButton [permanentColor]="'blue'" (click)="isAlterTheme = !isAlterTheme">switch theme</button>
+
+    <section class="flex-between" style="margin-left: auto; margin-right: auto; width: 50%">
+      <div class="theme">
+        <div class="label">
+          Theme:
+        </div>
+        <div class="value">
+          <button mat-icon-button color="primary" aria-label="Change theme"
+                  (click)="themePrimary.dark = !themePrimary.dark">
+            <mat-icon>{{themePrimary.dark ? 'nights_stay' : 'wb_sunny'}}</mat-icon>
+          </button>
+        </div>
+
+        <h5>Primary</h5>
+
+        <div class="label">Hue:</div>
+        <div class="value">
+          <mat-slider
+            [value]="themePrimary.h"
+            (input)="themePrimary.h = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="360"></mat-slider>
+        </div>
+        <div class="label">
+          Saturate:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themePrimary.s"
+            (input)="themePrimary.s = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Lightness:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themePrimary.l"
+            (input)="themePrimary.l = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Contrast threshold:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themePrimary.cc"
+            (input)="themePrimary.cc = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+      </div>
+
+      <div class="theme">
+        <h5 style="margin-top: 75px;">Accent</h5>
+
+
+        <div class="label">Hue:</div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAccent.h"
+            (input)="themeAccent.h = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="360"></mat-slider>
+        </div>
+        <div class="label">
+          Saturate:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAccent.s"
+            (input)="themeAccent.s = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Lightness:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAccent.l"
+            (input)="themeAccent.l = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Contrast threshold:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeAccent.cc"
+            (input)="themeAccent.cc = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+      </div>
+
+      <div class="theme">
+        <h5 style="margin-top: 75px;">Warn</h5>
+
+
+        <div class="label">Hue:</div>
+        <div class="value">
+          <mat-slider
+            [value]="themeWarn.h"
+            (input)="themeWarn.h = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="360"></mat-slider>
+        </div>
+        <div class="label">
+          Saturate:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeWarn.s"
+            (input)="themeWarn.s = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Lightness:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeWarn.l"
+            (input)="themeWarn.l = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+        <div class="label">
+          Contrast threshold:
+        </div>
+        <div class="value">
+          <mat-slider
+            [value]="themeWarn.cc"
+            (input)="themeWarn.cc = $event.value"
+            thumbLabel
+            color="primary"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+        </div>
+      </div>
+    </section>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
