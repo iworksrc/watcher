@@ -3,7 +3,9 @@
 $primary-map: ngx-mtc.create-theme-map('primary');
 $accent-map: ngx-mtc.create-theme-map('accent');
 $warn-map: ngx-mtc.create-theme-map('warn');
-
+$alt-primary-map: ngx-mtc.create-theme-map('alt-primary');
+$alt-accent-map: ngx-mtc.create-theme-map('alt-accent');
+$alt-warn-map: ngx-mtc.create-theme-map('alt-warn');
 /*
 This file needs to use
     mat.get-color-from-palette($primary-map, 500);
