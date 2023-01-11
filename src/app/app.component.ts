@@ -21,6 +21,8 @@ export class AppComponent implements OnInit {
   themeAltPrimary = new Theme(206, 92.8, 43.5, 65, false, 'alt-primary');
   themeAltAccent = new Theme(21, 88.5, 62.5, 65, false, 'alt-accent');
   themeAltWarn = new Theme(353, 100, 50, 65, false, 'alt-warn');
+  colorChanged = '#fff';
+  backgroundChanged = '#000';
 
   ngOnInit(): void {
     console.log(window.innerWidth);
@@ -49,5 +51,14 @@ export class AppComponent implements OnInit {
       // this.sidenav.fixedTopGap = 64;
       this.opened = true;
     }
+  }
+
+  setBackground($event: any) {
+    this.backgroundChanged = $event.target.value;
+  }
+
+  setColor($event: any) {
+    this.colorChanged = $event.target.value;
+
   }
 }

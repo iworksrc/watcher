@@ -73,7 +73,23 @@
       </mat-tab-group>
     </section>
 
-    <button appItButton [permanentColor]="'blue'" (click)="isAlterTheme = !isAlterTheme">switch theme</button>
+    <mat-card>
+
+      <div style="margin-bottom: 10px">
+        <button appItButton
+                mat-raised-button
+                [permanentColor]="colorChanged"
+                [permanentBackground]="backgroundChanged"
+                (click)="isAlterTheme = !isAlterTheme"
+        >switch theme
+        </button>
+      </div>
+
+      <div>
+        <input label="button background" type="color" [value]="'#000000'" (input)="setBackground($event)"/>
+        <input label="button color" type="color" [value]="'#ffffff'" (input)="setColor($event)"/>
+      </div>
+    </mat-card>
 
     <section class="flex-between" style="margin-left: auto; margin-right: auto; width: 50%">
       <div class="theme">
